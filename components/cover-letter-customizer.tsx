@@ -169,20 +169,28 @@ Sincerely,
                   >
                     Copy to Clipboard
                   </Button>
-                  <button onClick={() => reactToPrintFn()}>Print</button>
+                  <Button
+                    variant="default"
+                    onClick={() => reactToPrintFn()}
+                  >
+                    Print
+                  </Button>
                 </div>
-                {/* <div
-                  ref={contentRef}
-                  className="p-4 border rounded-md bg-white min-h-[300px] page text-justify"
+                <div
+                  className="p-4 border rounded-md bg-white min-h-[300px]  text-sm text-justify"
+                  style={{
+                    fontFamily : "'Times New Roman', Times, serif"
+
+                  }}
                   dangerouslySetInnerHTML={{
                     __html:
                       formatMarkdown(customizedLetter) ||
                       "Your customized cover letter will appear here.",
                   }}
-                /> */}
+                />
                 <div
                   ref={contentRef}
-                  className=" border rounded-md  page text-justify"
+                  className=" border rounded-md  page text-justify hidden"
                 >
                   <div
                     className="subpage text-justify text-sm"
